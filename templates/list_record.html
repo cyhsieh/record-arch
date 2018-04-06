@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+{#{{title}}#}
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <!--<th>ID</th>-->
+            <th>Date</th>
+            <th>Flow</th>
+            <th>Item</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        {% for record in records %}
+            <tr>
+              <!--<td>{{ record.id }}</td>-->
+                <td>{{ record.purch_date }}</td>
+                <td>{{ record.flow_type }}</td>
+                <td>{{ record.item }}</td>
+                <td>{{ record.amount }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
